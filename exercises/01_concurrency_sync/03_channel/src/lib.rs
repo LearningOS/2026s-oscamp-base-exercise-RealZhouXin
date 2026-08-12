@@ -52,6 +52,7 @@ pub fn multi_producer(n_producers: usize) -> Vec<String> {
     while let Ok(msg) = rx.recv() {
         received.push(msg);
     }
+    received.sort();
     received
 }
 
