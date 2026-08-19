@@ -200,7 +200,7 @@ pub fn pipe_through_grep(pattern: &str, input: &str) -> String {
     // TODO: Drop stdin to close pipe
     // TODO: Read output from child stdout line by line
     // TODO: Collect and return matching lines
-    let mut child_grip = Command::new("rg")
+    let mut child_grip = Command::new("grep")
         .arg(pattern)
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
